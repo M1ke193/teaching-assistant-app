@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/cardview_people_gv"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/student"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            app:srcCompat="@drawable/student">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/studenttextgv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/student"
+            android:padding="5dp"
+            android:text="Đinh Nhựt Minh"
+            android:textSize="20sp"></TextView>
+
+        <ImageView
+            android:id="@+id/email"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/student"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/email_black"></ImageView>
+
+        <TextView
+            android:id="@+id/emailstudent_gv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/student"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/email"
+            android:text="mndx1t@gmail.com"
+            android:textSize="20sp"
+            >
+        </TextView>
+        <ImageView
+            android:id="@+id/imagevang"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:srcCompat="@drawable/common_google_signin_btn_icon_dark_normal"
+            android:layout_marginTop="12dp"
+            android:layout_below="@id/emailstudent_gv"
+            android:layout_marginBottom="13dp"
+            android:layout_marginLeft="16dp">
+        </ImageView>
+        <TextView
+            android:id="@+id/sobuoivang_gv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/emailstudent_gv"
+            android:layout_marginTop="17dp"
+            android:layout_toRightOf="@+id/imagevang"
+            android:text="Tổng Số Buổi Vắng: 3"
+            android:textSize="20sp"
+            android:layout_marginLeft="11dp"
+            >
+        </TextView>
+        <View
+            android:background="#B8B8B8"
+            android:layout_height="2dp"
+            android:layout_width="fill_parent"
+            android:layout_below="@id/sobuoivang_gv"
+            android:layout_marginTop="25dp"/>
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

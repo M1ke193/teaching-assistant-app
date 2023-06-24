@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        android:layout_height="140dp">
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/text_for_collap_gv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:transitionName="ExampleTransition"
+            android:animateLayoutChanges="true"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            app:expandedTitleMargin="16dp"
+            app:contentScrim="@color/white"
+            app:expandedTitleTextAppearance="@style/Collapsing_text"
+            app:collapsedTitleTextAppearance="@style/collapsed_text"
+            app:title="Công Nghệ Thông Tin"
+            >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@color/Blue">
+                </ImageView>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/groundyellow"/>
+            </FrameLayout>
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_class_detail"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin" />
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tongsohs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:text="Tổng số học sinh: 25"
+                android:textSize="17dp"
+                android:textColor="#7A7A7A"></TextView>
+
+            <Button
+                android:id="@+id/addstudent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tongsohs"
+                android:layout_marginLeft="25dp"
+                android:text="Add Student"
+                android:textStyle="bold"></Button>
+            <TextView
+                android:id="@+id/temp"
+                android:textColor="#007FE4"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="17dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addstudent"
+                android:text="Điểm danh bằng mã code"
+                android:textSize="16dp">
+            </TextView>
+
+            <EditText
+                android:id="@+id/mhapma"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/temp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="180dp"
+                android:background="@drawable/drawroundclass"
+                android:maxLines="1"
+                android:inputType="text"
+                android:padding="11dp"></EditText>
+
+            <Button
+                android:id="@+id/btdiemdanh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/temp"
+                android:layout_marginLeft="245dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/drawroundclassbt"
+                android:text="Bắt Đầu"
+                android:textSize="14dp"
+                android:textStyle="bold"></Button>
+            <TextView
+                android:id="@+id/texttemp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:layout_marginLeft="17dp"
+                android:layout_below="@+id/mhapma"
+                android:text="Điểm danh thủ công"
+                android:textSize="16dp"
+                android:textColor="#007FE4">
+            </TextView>
+
+            <Button
+                android:id="@+id/bt_diem_danh_thu_cong"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/texttemp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/drawroundclassbt"
+                android:text="Điểm Danh Thủ Công"
+                android:textSize="16dp"
+                android:textStyle="bold"></Button>
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

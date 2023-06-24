@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        android:layout_height="140dp">
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/text_for_collap"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:transitionName="ExampleTransition"
+            android:animateLayoutChanges="true"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            app:expandedTitleMargin="16dp"
+            app:contentScrim="@color/white"
+            app:expandedTitleTextAppearance="@style/Collapsing_text"
+            app:collapsedTitleTextAppearance="@style/collapsed_text"
+            app:title="Công Nghệ Thông Tin"
+            >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@color/purple_200">
+                </ImageView>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/backgroundclass"/>
+            </FrameLayout>
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_class_detail"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin" />
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textxacnhan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:text="Mã xác nhận điểm danh"
+                android:textSize="17dp"></TextView>
+
+            <EditText
+                android:id="@+id/mhapma"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textxacnhan"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="180dp"
+                android:background="@drawable/drawroundclass"
+                android:maxLines="1"
+                android:inputType="text"
+                android:padding="11dp"></EditText>
+
+            <Button
+                android:id="@+id/nutXacNhan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textxacnhan"
+                android:layout_marginLeft="245dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/drawroundclassbt"
+                android:text="Xác Nhận"
+                android:textSize="14dp"></Button>
+
+            <TextView
+                android:id="@+id/temptext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mhapma"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="25dp"
+                android:text="My Atendance: "
+                android:textColor="#007FE4"
+                android:textSize="19dp"></TextView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listatendance"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/temptext"></androidx.recyclerview.widget.RecyclerView>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

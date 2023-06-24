@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "685940669727",
+    "project_id": "final-f785c",
+    "storage_bucket": "final-f785c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:685940669727:android:845529af653a625fa6442a",
+        "android_client_info": {
+          "package_name": "com.example.teaching_assistant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "685940669727-8nv9f8ov7qd81948c7q3iso60kppntng.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAd2EHuZuRMI5yLnWTChg-B0hGtV_zIXyc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "685940669727-8nv9f8ov7qd81948c7q3iso60kppntng.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
